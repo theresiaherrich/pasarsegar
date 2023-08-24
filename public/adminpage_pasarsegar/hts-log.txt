@@ -1,0 +1,16 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 24 Aug 2023 14:00:57 at https://themesbrand.com/minible/layouts/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://themesbrand.com/minible/layouts/index.html -O1 "E:\08 - Laravel\template laravel\adminpage_pasarsegar" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:04:51	Warning: 	Retry after error -4 (No data (connection closed)) at link https://themesbrand.com/minible/layouts/icons-unicons.html (from https://themesbrand.com/minible/layouts/index.html)
+14:05:35	Warning: 	File not parsed, looks like binary: https://themesbrand.com/minible/layouts/assets/fonts/fa-brands-400.woff2
+14:05:36	Warning: 	File not parsed, looks like binary: https://themesbrand.com/minible/layouts/assets/fonts/fa-regular-400.woff2
+14:05:37	Warning: 	File not parsed, looks like binary: https://themesbrand.com/minible/layouts/assets/fonts/fa-solid-900.woff2
+14:05:40	Error: 	"Not Found" (404) at link https://themesbrand.com/minible/layouts/assets/libs/flot.curvedLines/curvedLines.js (from https://themesbrand.com/minible/layouts/charts-flot.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 45 seconds : 319 links scanned, 316 files written (23944214 bytes overall) [11654415 bytes received at 40892 bytes/sec], 15728160 bytes transferred using HTTP compression in 241 files, ratio 21%, 5.5 requests per connection
+(1 errors, 4 warnings, 0 messages)
