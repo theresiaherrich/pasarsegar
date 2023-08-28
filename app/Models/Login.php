@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Login extends Model
 {
     use HasFactory;
+
+    protected $fillabel = [
+        'username',
+        'email',
+        'pass',
+    ];
 }
