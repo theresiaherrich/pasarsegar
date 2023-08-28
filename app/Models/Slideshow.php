@@ -5,20 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class Slideshow extends Model
 {
-    protected $table = 'kategori';
+    protected $table = "slideshow";
     protected $fillable = [
-        'kode_kategori',
-        'nama_kategori',
-        'slug_kategori',
-        'deskripsi_kategori',
-        'status',
         'foto',
+        'caption_title',
+        'caption_content',
         'user_id',
     ];
 
-    public function user() {//user yang menginput data kategori
+    public function user() {
         return $this->belongsTo('App\User', 'user_id');
     }
 }
