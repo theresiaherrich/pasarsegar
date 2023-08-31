@@ -21,16 +21,16 @@
                             </li>
 
                         </ul>
-                       
+
                     </div>
                   </div>
                 </div>
-        
+
               </div>
         </div>
         <div class="col-lg-9">
             <div class="row">
-                
+
       <div class="col-lg-3 mb-3 ">
         <div class="card" style="width: 13rem;">
             <img src="img/bg.jpg" class="card-img-top" alt="...">
@@ -41,7 +41,7 @@
             </div>
           </div>
         </div>
-                     
+
       <div class="col-lg-3 mb-3 ">
         <div class="card" style="width: 13rem;">
             <img src="img/bg.jpg" class="card-img-top" alt="...">
@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-                     
+
       <div class="col-lg-3 mb-3 ">
         <div class="card" style="width: 13rem;">
             <img src="img/bg.jpg" class="card-img-top" alt="...">
@@ -63,7 +63,7 @@
             </div>
           </div>
         </div>
-                     
+
       <div class="col-lg-3 mb-3 ">
         <div class="card" style="width: 13rem;">
             <img src="img/bg.jpg" class="card-img-top" alt="...">
@@ -75,13 +75,13 @@
           </div>
         </div>
         </div>
-        
-     
+
+
         </div>
-       
-            
-         
-            
+
+
+
+
             </div>
         </div>
     </div>
