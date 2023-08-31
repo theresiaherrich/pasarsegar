@@ -46,24 +46,39 @@
   <div class="row ">
 
 
-    <div class="owl-carousel owl-theme mt-4 ">
+    <div class="owl-carousel mt-4 " id="owl-example">
 
 
-      <div class="item card border-0 bg-dark mb-5">
-          <img src="img/k1.png" class=" shadow " style="opacity: 0.9;" alt="...">
-          <h5 style="position:absolute;color:#fff;bottom:20px;left:20px">Buah</h5>
+      <div class="item card border-0  mb-5">
+          <img src="img/k1.png"  alt="...">
+          <h3 >Buah</h3>
       </div>
-      <div class="item card border-0 bg-dark mb-5">
-          <img src="img/k2.png" class=" shadow " style="opacity: 0.9;" alt="...">
-          <h5 style="position:absolute;color:#fff;bottom:20px;left:20px">Buah</h5>
+      <div class="item card border-0  mb-5">
+          <img src="img/k2.png"  alt="...">
+          <h3 >Buah</h3>
       </div>
-      <div class="item card border-0 bg-dark mb-5">
-          <img src="img/k3.png" class=" shadow " style="opacity: 0.9;" alt="...">
-          <h5 style="position:absolute;color:#fff;bottom:20px;left:20px">Buah</h5>
+      <div class="item card border-0  mb-5">
+          <img src="img/k3.png"  alt="...">
+          <h3 >Buah</h3>
+      </div>
+      
+      <div class="item card border-0  mb-5">
+          <img src="img/k4.png"  alt="...">
+         
+      </div>
+      
+      <div class="item card border-0  mb-5">
+          <img src="img/k5.png"  alt="...">
+          <h3 >Buah</h3>
+      </div>
+      <div class="item card border-0  mb-5">
+          <img src="img/k6.png"  alt="...">
+          <h3 >Buah</h3>
       </div>
      
      
   </div>
+</div>
           
             
   </div>
