@@ -46,43 +46,26 @@
   <div class="row ">
 
 
-      <div class="col-lg-3 ">
-      <div class="card  bg-dark">
-        <img src="img/bg1.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay text-light">
-          <h1 class="card-title">Card title</h1>
+    <div class="owl-carousel owl-theme mt-4 ">
 
-        </div>
+
+      <div class="item card border-0 bg-dark mb-5">
+          <img src="img/k1.png" class=" shadow " style="opacity: 0.9;" alt="...">
+          <h5 style="position:absolute;color:#fff;bottom:20px;left:20px">Buah</h5>
       </div>
+      <div class="item card border-0 bg-dark mb-5">
+          <img src="img/k2.png" class=" shadow " style="opacity: 0.9;" alt="...">
+          <h5 style="position:absolute;color:#fff;bottom:20px;left:20px">Buah</h5>
       </div>
-
-        <div class="col-lg-3 ">
-          <div class="card text-bg-dark">
-            <img src="img/bg.jpg" class="card-img" alt="..." >
-            <div class="card-img-overlay text-light">
-              <h1 class="card-title">Card title</h1>
-
-            </div>
-          </div>
-          </div>
-          <div class="col-lg-3 ">
-            <div class="card text-bg-dark">
-              <img src="img/bg3.jpg" class="card-img" alt="...">
-              <div class="card-img-overlay text-light">
-                <h1 class="card-title">Card title</h1>
-
-              </div>
-            </div>
-            </div>
-            <div class="col-lg-3 ">
-              <div class="card text-bg-dark">
-                <img src="img/bg3.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay text-light">
-                  <h1 class="card-title">Card title</h1>
-
-                </div>
-              </div>
-              </div>
+      <div class="item card border-0 bg-dark mb-5">
+          <img src="img/k3.png" class=" shadow " style="opacity: 0.9;" alt="...">
+          <h5 style="position:absolute;color:#fff;bottom:20px;left:20px">Buah</h5>
+      </div>
+     
+     
+  </div>
+          
+            
   </div>
 
 
