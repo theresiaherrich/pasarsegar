@@ -49,31 +49,31 @@
     <div class="owl-carousel mt-4 " id="owl-example">
 
 
-      <div class="item card border-0  mb-5">
-          <img src="img/k1.png"  alt="...">
-          <h3 >Buah</h3>
+      <div class="item card border-0  ">
+          <img src="img/k1.png" class="rounded-image"  alt="...">
+          <h3 class="text-dark mt-2" >Buah</h3>
       </div>
-      <div class="item card border-0  mb-5">
-          <img src="img/k2.png"  alt="...">
-          <h3 >Buah</h3>
+      <div class="item card border-0  ">
+          <img src="img/k2.png" class="rounded-image"   alt="...">
+          <h3 class="text-dark mt-2" >Buah</h3>
       </div>
-      <div class="item card border-0  mb-5">
-          <img src="img/k3.png"  alt="...">
-          <h3 >Buah</h3>
-      </div>
-      
-      <div class="item card border-0  mb-5">
-          <img src="img/k4.png"  alt="...">
-         
+      <div class="item card border-0  ">
+          <img src="img/k3.png" class="rounded-image"  alt="...">
+          <h3 class="text-dark mt-2" >Buah</h3>
       </div>
       
-      <div class="item card border-0  mb-5">
-          <img src="img/k5.png"  alt="...">
-          <h3 >Buah</h3>
+      <div class="item card border-0  ">
+          <img src="img/k4.png" class="rounded-image"  alt="...">
+          <h3 class="text-dark mt-2" >Buah</h3>
       </div>
-      <div class="item card border-0  mb-5">
-          <img src="img/k6.png"  alt="...">
-          <h3 >Buah</h3>
+      
+      <div class="item card border-0  ">
+          <img src="img/k5.png" class="rounded-image"   alt="...">
+          <h3 class="text-dark mt-2" >Buah</h3>
+      </div>
+      <div class="item card border-0  ">
+          <img src="img/k6.png" class="rounded-image"  alt="...">
+          <h3 class="text-dark mt-2" >Buah</h3>
       </div>
      
      
