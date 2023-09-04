@@ -19,7 +19,7 @@ class Produk extends Model
         'qty',
         'satuan',
         'harga',
-        'status',
+        'stock',
     ];
 
     public function kategori() {

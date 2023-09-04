@@ -22,7 +22,7 @@ class CreateProdukImagesTable extends Migration
 
         Schema::table('produk_images', function($table)
 {
-    $table->foreign('produk_id')->references('id')->on('produks');
+    $table->foreign('produk_id')->references('id')->on('produk');
 });
     }
 

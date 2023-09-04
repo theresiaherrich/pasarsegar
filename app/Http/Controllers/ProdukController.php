@@ -18,7 +18,7 @@ class ProdukController extends Controller
         $itemproduk = Produk::orderBy('created_at', 'desc')->paginate(20);
         $data = array('title' => 'Produk',
                     'itemproduk' => $itemproduk);
-        return view('produk.index', $data)->with('no', ($request->input('page', 1) - 1) * 20);
+        return view('admin.produk.index', $data)->with('no', ($request->input('page', 1) - 1) * 20);
     }
 
     /**
@@ -31,7 +31,7 @@ class ProdukController extends Controller
         $itemkategori = Kategori::orderBy('nama_kategori', 'asc')->get();
         $data = array('title' => 'Form Produk Baru',
                     'itemkategori' => $itemkategori);
-        return view('produk.create', $data);
+        return view('admin.produk.create', $data);
     }
 
     /**
@@ -48,7 +48,7 @@ class ProdukController extends Controller
             'slug_produk' => 'required',
             'deskripsi_produk' => 'required',
             'kategori_id' => 'required',
-            'qty' => 'required|numeric',
+            'stock' => 'required',
             'satuan' => 'required',
             'harga' => 'required|numeric'
         ]);
@@ -57,9 +57,8 @@ class ProdukController extends Controller
         $inputan = $request->all();
         $inputan['slug_produk'] = $slug;
         $inputan['user_id'] = $itemuser->id;
-        $inputan['status'] = 'publish';
         $itemproduk = Produk::create($inputan);
-        return redirect()->route('produk.index')->with('success', 'Data berhasil disimpan');
+        return redirect('/dataproduk')->with('success', 'Data berhasil disimpan');
     }
 
     /**
@@ -107,6 +106,7 @@ class ProdukController extends Controller
             'slug_produk' => 'required',
             'deskripsi_produk' => 'required',
             'kategori_id' => 'required',
+            'stock' => 'required',
             'qty' => 'required|numeric',
             'satuan' => 'required',
             'harga' => 'required|numeric'

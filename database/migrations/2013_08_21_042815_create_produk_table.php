@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('produks', function (Blueprint $table) {
+        Schema::create('produk', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('kategori_id')->unsigned();
             $table->unsignedBigInteger('user_id')->unsigned();
@@ -24,12 +24,12 @@ return new class extends Migration
             $table->string('foto')->nullable();//banner produknya
             $table->double('qty', 12, 2)->default(0);
             $table->string('satuan');
+            $table->string('stock');
             $table->double('harga', 12, 2)->default(0);
-            $table->string('status');
             $table->timestamps();
         });
 
-        Schema::table('produks', function($table)
+        Schema::table('produk', function($table)
         {
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('kategori_id')->references('id')->on('kategoris');
@@ -43,6 +43,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('produk');
     }
 };

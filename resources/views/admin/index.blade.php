@@ -36,7 +36,7 @@
 
     <!-- Begin page -->
     <div id="layout-wrapper">
-        @include('header')
+        @include('admin.header')
 <!-- removeNotificationModal -->
 <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -62,7 +62,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
         <!-- ========== App Menu ========== -->
-        @include('sidebar')
+        @include('admin.sidebar')
 
         <!-- ============================================================== -->
         <!-- Start right Content here -->
