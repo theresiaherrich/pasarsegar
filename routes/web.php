@@ -29,3 +29,5 @@ Route::get('/admin', function () {
 
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 Route::get('/tambahproduk', [ProdukController::class, 'create'])->name('create');
+
+
