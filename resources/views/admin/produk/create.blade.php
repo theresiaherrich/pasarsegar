@@ -171,9 +171,11 @@
                                                                 </div>
                                                             </div>
                                                         </label>
+
                                                         <input class="form-control d-none" value=""
-                                                            id="product-image-input" type="file"
-                                                            accept="image/png, image/gif, image/jpeg">
+                                                            id="foto" name="foto" type="file"
+                                                            accept="foto/png, foto/gif, foto/jpeg">
+
                                                     </div>
                                                     <div class="avatar-lg">
                                                         <div class="avatar-title bg-light rounded">
@@ -190,7 +192,7 @@
 
                                             <div class="dropzone">
                                                 <div class="fallback">
-                                                    <input name="file" type="file" multiple="multiple">
+                                                    <input name="foto" id="foto" type="file" multiple="multiple">
                                                 </div>
                                                 <div class="dz-message needsclick">
                                                     <div class="mb-3">

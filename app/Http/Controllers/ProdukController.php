@@ -47,11 +47,16 @@ class ProdukController extends Controller
             'nama_produk' => 'required',
             'slug_produk' => 'required',
             'deskripsi_produk' => 'required',
+            'foto'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
             'kategori_id' => 'required',
             'stock' => 'required',
             'satuan' => 'required',
             'harga' => 'required|numeric'
         ]);
+        //upload image
+        $foto = $request->file('foto');
+        $foto->storeAs('public/produk', $foto->hashName());
+
         $itemuser = $request->user();//ambil data user yang login
         $slug = \Str::slug($request->slug_produk);//buat slug dari input slug produk
         $inputan = $request->all();
@@ -105,6 +110,7 @@ class ProdukController extends Controller
             'nama_produk' => 'required',
             'slug_produk' => 'required',
             'deskripsi_produk' => 'required',
+            'foto'     => 'mimes:jpeg,jpg,png|max:2048',
             'kategori_id' => 'required',
             'stock' => 'required',
             'qty' => 'required|numeric',
