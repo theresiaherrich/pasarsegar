@@ -17,7 +17,6 @@ class CreateKategorisTable extends Migration
             $table->id();
             $table->string('kode_kategori');
             $table->string('nama_kategori');
-            $table->string('slug_kategori');
             $table->text('deskripsi_kategori');
             $table->string('status');
             $table->string('foto')->nullable();//foto atau banner kategori

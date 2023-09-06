@@ -204,7 +204,7 @@
                                                     @php
                                                         $no = 1;
                                                     @endphp
-                                                    @forelse ($itemproduk as $row)
+                                                    @forelse ($prod as $row)
                                                         <tr>
                                                             <th scope="row">{{ $no++ }}</th>
                                                             <td class="id" style="display:none;"><a
@@ -224,7 +224,7 @@
                                                                 {{ $row->nama_produk }}
                                                             </td>
                                                             <td>
-                                                                {{ $row->qty }} {{ $row->satuan }}
+                                                                {{ $row->satuan }}
                                                             </td>
                                                             <td>
                                                                 {{ number_format($row->harga, 2) }}
@@ -267,7 +267,7 @@
                                         </div>
                                         <div class="d-flex justify-content-end">
                                             <div class="pagination-wrap hstack gap-2">
-                                                {{ $itemproduk->links() }}
+                                                {{ $prod->links() }}
                                             </div>
                                         </div>
                                     </div>

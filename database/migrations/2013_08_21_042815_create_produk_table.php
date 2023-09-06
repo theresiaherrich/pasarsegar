@@ -19,10 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->unsigned();
             $table->string('kode_produk');
             $table->string('nama_produk');
-            $table->string('slug_produk');
             $table->text('deskripsi_produk');
             $table->string('foto')->nullable();//banner produknya
-            $table->double('qty', 12, 2)->default(0);
             $table->string('satuan');
             $table->string('stock');
             $table->double('harga', 12, 2)->default(0);
