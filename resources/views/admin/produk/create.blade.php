@@ -99,7 +99,7 @@
                     </div>
                     <!-- end page title -->
 
-                    <form id="createproduct-form" autocomplete="off" class="needs-validation" novalidate>
+                    {{-- <form id="createproduct-form" autocomplete="off" class="needs-validation" novalidate> --}}
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="card">
@@ -133,12 +133,6 @@
                                                     id="nama_produk" placeholder="Masukan Kode Produk" required>
                                                 <div class="invalid-feedback">Masukan Kode Produk</div>
                                             </div>
-                                            <div class="mb-3">
-                                                <label class="form-label" for="slug_produk">Slug Produk</label>
-                                                <input type="text" name="slug_produk" id="slug_produk" class="form-control"
-                                                placeholder="Masukan Slug Produk" required>
-                                                <div class="invalid-feedback">Masukan Slug Produk</div>
-                                            </div>
                                             <div>
                                                 <label>Deskripsi  Produk</label>
                                                 <div id="ckeditor-classic">
@@ -155,37 +149,6 @@
                                         <h5 class="card-title mb-0">Foto-Foto Produk</h5>
                                     </div>
                                     <div class="card-body">
-                                        <div class="mb-4">
-                                            <h5 class="fs-14 mb-1">Foto Produk</h5>
-                                            <p class="text-muted">Masukan Tampilan Produk</p>
-                                            <div class="text-center">
-                                                <div class="position-relative d-inline-block">
-                                                    <div class="position-absolute top-100 start-100 translate-middle">
-                                                        <label for="product-image-input" class="mb-0"
-                                                            data-bs-toggle="tooltip" data-bs-placement="right"
-                                                            title="Select Image">
-                                                            <div class="avatar-xs">
-                                                                <div
-                                                                    class="avatar-title bg-light border rounded-circle text-muted cursor-pointer">
-                                                                    <i class="ri-image-fill"></i>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-
-                                                        <input class="form-control d-none" value=""
-                                                            id="foto" name="foto" type="file"
-                                                            accept="foto/png, foto/gif, foto/jpeg">
-
-                                                    </div>
-                                                    <div class="avatar-lg">
-                                                        <div class="avatar-title bg-light rounded">
-                                                            <img src="#" id="product-img"
-                                                                class="avatar-md h-auto" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div>
                                             <h5 class="fs-14 mb-1">Foto-Foto Produk</h5>
                                             <p class="text-muted">Masukan kumpulan-kumpulan foto produk</p>
@@ -261,18 +224,18 @@
                                             <div class="tab-pane active" id="addproduct-general-info"
                                                 role="tabpanel">
                                                 <div class="row">
-                                                    {{-- <div class="col-lg-6">
+                                                    <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label class="form-label"
                                                             for="kategori_id">Kategori Produk</label>
                                                             <select name="kategori_id" id="kategori_id" class="form-control">
                                                                 <option value="">Pilih Kategori</option>
-                                                                @foreach($itemkategori as $kategori)
+                                                                @foreach($kat as $kategori)
                                                                 <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
                                                                 @endforeach
                                                               </select>
                                                         </div>
-                                                    </div> --}}
+                                                    </div>
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label class="form-label"
@@ -286,15 +249,6 @@
                                                 <!-- end row -->
 
                                                 <div class="row">
-                                                    <div class="col-lg-3 col-sm-6">
-                                                        <div class="mb-3">
-                                                            <label class="form-label"
-                                                            for="qty">Qty</label>
-                                                            <input type="text" class="form-control"
-                                                            name="qty" id="qty" placeholder="qty" required>
-                                                            <div class="invalid-feedback">Masukan Qty</div>
-                                                        </div>
-                                                    </div>
                                                     <div class="col-lg-3 col-sm-6">
                                                         <div class="mb-3">
                                                             <label class="form-label"
