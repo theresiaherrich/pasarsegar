@@ -15,8 +15,8 @@ use App\Models\Produk;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/home', function () {
+    return view('home');
 });
 
 Route::get('/produk', function () {
@@ -31,3 +31,7 @@ Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 Route::get('/tambahproduk', [ProdukController::class, 'create'])->name('create');
 
 
+
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');

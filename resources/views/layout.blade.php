@@ -81,8 +81,23 @@
             <li class="nav-item px-3">
             <a class="nav-link " href="#"><i class="bi bi-cart-fill"></i>&nbsp;&nbsp;<span class="navt">Keranjang</span></a>
             </li>
-            <li class="nav-item px-3">
-              <a class="nav-link " href="#"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;<span class="navt">User</span></a>
+            <li class="nav-item dropdown px-3">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+                <i class="bi bi-person-circle"></i>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                      @csrf
+                  </form>
+              </div>
             </li>
             
            
