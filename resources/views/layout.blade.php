@@ -17,6 +17,9 @@
     <!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <!-- Scripts Auth-->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
   </head>
   <style>
     .nav-link{
@@ -25,7 +28,7 @@
     }
     .navbar-brand img{
       position: absolute;
-      top:1px;
+      top:10px;
     }
     .navt{
       display: none;
@@ -60,7 +63,7 @@
     <nav class="navbar navbar-expand-lg shadow-lg sticky-top"style="background-image:url('img/bgnv.jpg')">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="img/PASAR SEGAR.png" alt="Bootstrap" width="100" >
+          <img src="img/PASAR SEGAR.png" alt="Bootstrap" width="65" >
         </a>
       
         
@@ -81,7 +84,7 @@
             <li class="nav-item px-3">
             <a class="nav-link " href="#"><i class="bi bi-cart-fill"></i>&nbsp;&nbsp;<span class="navt">Keranjang</span></a>
             </li>
-            <li class="nav-item dropdown px-3">
+            <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->name }}
                 <i class="bi bi-person-circle"></i>
@@ -91,9 +94,9 @@
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
+                      <i class="bi bi-box-arrow-right"></i>
                       {{ __('Logout') }}
                   </a>
-
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                       @csrf
                   </form>
@@ -133,12 +136,9 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
 <script src="js/jquery.min.js"></script>
-    <script src="owl-carousel/owl.carousel.min.js"></script>
+<script src="owl-carousel/owl.carousel.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript">
