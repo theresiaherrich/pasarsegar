@@ -15,7 +15,7 @@ use App\Models\Produk;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/hiddenhome', function () {
     return view('home');
 });
 
