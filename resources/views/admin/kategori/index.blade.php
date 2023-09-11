@@ -215,13 +215,7 @@
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                <a href="{{ route('datakategori.show', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
-                                                                  Detail
-                                                                </a>
-                                                                <a href="{{ route('datakategori.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
-                                                                  Edit
-                                                                </a>
-                                                                <form action="{{ route('datakategori.destroy', $row->id) }}" method="post" style="display:inline;">
+                                                                <form onsubmit="return confirm('Apakah Anda Yakin ?');"  action="{{ route('datakategori.destroy', $row->id) }}" method="post" style="display:inline;">
                                                                   @csrf
                                                                   {{ method_field('delete') }}
                                                                   <button type="submit" class="btn btn-sm btn-danger mb-2">

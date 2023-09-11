@@ -397,7 +397,44 @@
                     </div>
                 </li> <!-- end Dashboard Menu -->
 
-                <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages">Pages</span></li>
+            <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages">Pages</span></li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarProduk" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProduk">
+                        <i class="ri-archive-line"></i> <span data-key="t-produk">Produk</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarProduk">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="/tambahproduk" class="nav-link" data-key="t-tambahproduk"> Tambah Produk
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/dataproduk" class="nav-link" data-key="t-dataproduk"> Data Produk
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarKategori" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarKategori">
+                        <i class="ri-archive-line"></i> <span data-key="t-kategori">Kategori</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarKategori">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="/tambahkategori" class="nav-link" data-key="t-tambahkategori"> Tambah Kategori
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/datakategori" class="nav-link" data-key="t-datakategori"> Data Kategori
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
