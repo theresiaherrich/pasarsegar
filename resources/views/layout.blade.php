@@ -97,6 +97,12 @@
                       <i class="bi bi-box-arrow-right"></i>
                       {{ __('Logout') }}
                   </a>
+                  @if (Auth::user()->role_akun=='admin')
+                  <a class="dropdown-item" href="/admin">
+                    <i class="bi bi-database"></i>
+                    {{ __('Admin Page') }}
+                  </a>
+                  @endif
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                       @csrf
                   </form>
