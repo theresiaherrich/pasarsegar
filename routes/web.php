@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Models\Produk;
+use App\Http\Controllers\KategoriController;
+use App\Models\Kategori;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +31,11 @@ Route::get('/admin', function () {
 
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 Route::get('/tambahproduk', [ProdukController::class, 'create'])->name('create');
+
+
+//kategoriadmin
+Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
+Route::get('/tambahkategori', [KategoriController::class, 'create'])->name('create');
 
 
 

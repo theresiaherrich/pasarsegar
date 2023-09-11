@@ -8,7 +8,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Data Produk | Admin</title>
+    <title>Data Kategori | Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -86,12 +86,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Data Product</h4>
+                                <h4 class="mb-sm-0">Data Kategori</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Ecommerce</a></li>
-                                        <li class="breadcrumb-item active">Product</li>
+                                        <li class="breadcrumb-item active">Kategori</li>
                                     </ol>
                                 </div>
 
@@ -108,7 +108,7 @@
                                     <div class="row g-4 align-items-center">
                                         <div class="col-sm">
                                             <div>
-                                                <h5 class="card-title mb-0">Data Product</h5>
+                                                <h5 class="card-title mb-0">Data Kategori</h5>
                                             </div>
                                         </div>
                                         <div class="col-sm-auto">
@@ -119,7 +119,7 @@
                                                 <button type="button" class="btn btn-success add-btn"
                                                     data-bs-toggle="modal" id="create-btn"
                                                     data-bs-target="#showModal"><i
-                                                        class="ri-add-line align-bottom me-1"></i> Add Product</button>
+                                                        class="ri-add-line align-bottom me-1"></i> Add Kategori</button>
                                                 <button type="button" class="btn btn-info"><i
                                                         class="ri-file-download-line align-bottom me-1"></i>
                                                     Import</button>
@@ -190,12 +190,8 @@
                                                             </div>
                                                         </th>
 
-                                                        <th class="sort" data-sort="foto">Foto Produk</th>
-                                                         <th class="sort" data-sort="nama_produk">Produk</th>
-                                                        <th class="sort" data-sort="satuan">Jumlah</th>
-                                                        <th class="sort" data-sort="harga">Harga</th>
-                                                        <th class="sort" data-sort="kategori">Kategori</th>
-                                                        <th class="sort" data-sort="stock">Stock</th>
+                                                        <th class="sort" data-sort="nama_kategori">Kategori</th>
+                                                        <th class="sort" data-sort="foto">Foto</th>
                                                         <th class="sort" data-sort="action">Action</th>
                                                     </tr>
                                                 </thead>
@@ -203,41 +199,29 @@
                                                     @php
                                                         $no = 1;
                                                     @endphp
-                                                    @forelse ($prod as $row)
+                                                    @forelse ($itemkategori as $row)
                                                         <tr>
                                                             <th scope="row">{{ $no++ }}</th>
                                                             <td class="id" style="display:none;"><a
                                                                     href="javascript:void(0);"
                                                                     class="fw-medium link-primary">#VZ2101</a></td>
                                                             <td>
+                                                                {{ $row->nama_kategori }}
+                                                            </td>
+                                                            <td>
                                                                 @if ($row->foto != null)
-                                                                    <img src="{{ asset('storage/produk/'.$row->foto) }}"
+                                                                    <img src="{{ asset('storage/kategori/'.$row->foto) }}"
                                                                         width='150px' class="img-thumbnail">
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                {{ $row->nama_produk }}
-                                                            </td>
-                                                            <td>
-                                                                {{ $row->satuan }}
-                                                            </td>
-                                                            <td>
-                                                                {{ number_format($row->harga, 2) }}
-                                                            </td>
-                                                            <td>
-                                                                {{ $row->kategori_id }}
-                                                            </td>
-                                                            <td>
-                                                                {{ $row->stock }}
-                                                            </td>
-                                                            <td>
-                                                                <a href="{{ route('dataproduk.show', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                                                <a href="{{ route('datakategori.show', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
                                                                   Detail
                                                                 </a>
-                                                                <a href="{{ route('dataproduk.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
+                                                                <a href="{{ route('datakategori.edit', $row->id) }}" class="btn btn-sm btn-primary mr-2 mb-2">
                                                                   Edit
                                                                 </a>
-                                                                <form action="{{ route('dataproduk.destroy', $row->id) }}" method="post" style="display:inline;">
+                                                                <form action="{{ route('datakategori.destroy', $row->id) }}" method="post" style="display:inline;">
                                                                   @csrf
                                                                   {{ method_field('delete') }}
                                                                   <button type="submit" class="btn btn-sm btn-danger mb-2">
@@ -262,7 +246,7 @@
                                         </div>
                                         <div class="d-flex justify-content-end">
                                             <div class="pagination-wrap hstack gap-2">
-                                                {{ $prod->links() }}
+                                                {{ $itemkategori->links() }}
                                             </div>
                                         </div>
                                     </div>
