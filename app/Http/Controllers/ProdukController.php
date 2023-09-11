@@ -122,7 +122,7 @@ class ProdukController extends Controller
     {
         //validate form
         $this->validate($request, [
-            'foto'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'foto'     => 'mimes:jpeg,jpg,png|max:2048',
             'nama_produk' => 'required',
             'kategori_id' => 'required',
             'satuan' => 'required',
