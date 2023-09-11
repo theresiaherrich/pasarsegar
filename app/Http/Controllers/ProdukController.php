@@ -60,7 +60,6 @@ class ProdukController extends Controller
         $this->validate($request, [
             'foto'     => 'required|mimes:jpeg,jpg,png|max:2048',
             'nama_produk' => 'required',
-            'deskripsi_produk' => 'required',
             'kategori_id' => 'required|exists:kategoris,id',
             'satuan' => 'required',
             'stock' => 'required',
@@ -74,7 +73,6 @@ class ProdukController extends Controller
         Produk::create([
             'foto'     => $foto->hashName(),
             'nama_produk'     => $request->nama_produk,
-            'deskripsi_produk'   => $request->deskripsi_produk,
             'kategori_id'      => $request->kategori_id,
             'satuan' => $request->satuan,
             'stock'      => $request->stock,
@@ -125,9 +123,7 @@ class ProdukController extends Controller
         //validate form
         $this->validate($request, [
             'foto'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
-            'kode_produk' => 'required|unique:produk',
             'nama_produk' => 'required',
-            'deskripsi_produk' => 'required',
             'kategori_id' => 'required',
             'satuan' => 'required',
             'stock' => 'required',
@@ -151,8 +147,6 @@ class ProdukController extends Controller
             $prod->update([
                 'foto'     => $foto->hashName(),
             'nama_produk'     => $request->nama_produk,
-            'kode_produk'   => $request->kode_produk,
-            'deskripsi_produk'   => $request->deskripsi_produk,
             'kategori_id'      => $request->kategori_id,
             'satuan' => $request->satuan,
             'stock'      => $request->stock,
@@ -164,8 +158,6 @@ class ProdukController extends Controller
             //update post without image
             $prod->update([
                 'nama_produk'     => $request->nama_produk,
-            'kode_produk'   => $request->kode_produk,
-            'deskripsi_produk'   => $request->deskripsi_produk,
             'kategori_id'      => $request->kategori_id,
             'satuan' => $request->satuan,
             'stock'      => $request->stock,

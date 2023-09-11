@@ -127,11 +127,6 @@
                                                     id="nama_produk" placeholder="Masukan Nama Produk" required>
                                                 <div class="invalid-feedback">Masukan Nama Produk</div>
                                             </div>
-
-                                            <div>
-                                                <label>Deskripsi  Produk</label>
-                                                    <textarea name="deskripsi_produk" id="deskripsi_produk"class="form-control"></textarea>
-                                            </div>
                                     </div>
                                 </div>
                                 <!-- end card -->
