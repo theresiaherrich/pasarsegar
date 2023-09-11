@@ -17,7 +17,7 @@ class KategoriController extends Controller
         $itemkategori = Kategori::orderBy('created_at', 'desc')->paginate(20);
         $data = array('title' => 'Kategori Produk',
                     'itemkategori' => $itemkategori);
-        return view('kategori.index', $data)->with('no', ($request->input('page', 1) - 1) * 20);
+        return view('admin.kategori.index', $data)->with('no', ($request->input('page', 1) - 1) * 20);
     }
 
     /**
@@ -28,7 +28,7 @@ class KategoriController extends Controller
     public function create()
     {
         $data = array('title' => 'Form Kategori');
-        return view('kategori.create', $data);
+        return view('admin.kategori.create', $data);
     }
 
     /**
@@ -40,19 +40,18 @@ class KategoriController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'kode_kategori' => 'required|unique:kategori',
             'nama_kategori'=>'required',
-            'slug_kategori' => 'required',
-            'deskripsi_kategori' => 'required',
+            'foto' => 'required|mimes:jpeg,jpg,png|max:2048',
         ]);
-        $itemuser = $request->user();//kita panggil data user yang sedang login
-        $inputan = $request->all();//kita masukkan semua variabel data yang diinput ke variabel $inputan
-        $inputan['user_id'] = $itemuser->id;
-        $inputan['slug_kategori'] = \Str::slug($request->slug_kategori);//kita buat slug biar pemisahnya menjadi strip (-)
-        //slug kita gunakan nanti pas buka produk per kategori
-        $inputan['status'] = 'publish';//status kita set langsung publish saja
-        $itemkategori = Kategori::create($inputan);
-        return redirect()->route('kategori.index')->with('success', 'Data kategori berhasil disimpan');
+        $foto = $request->file('foto');
+        $foto->storeAs('public/kategori', $foto->hashName());
+
+        Kategori::create([
+            'foto'     => $foto->hashName(),
+            'nama_kategori'     => $request->nama_kategori,
+        ]);
+
+        return redirect('/datakategori')->with('success', 'Data kategori berhasil disimpan');
     }
 
     /**

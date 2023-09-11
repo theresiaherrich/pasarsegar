@@ -28,7 +28,7 @@ class ProdukController extends Controller
     public function index(): View
     {
         //get posts
-        $prod = Produk::with('produk')->paginate(5);
+        $prod = Produk::with('kategori')->paginate(5);
 
 
         //render view with posts
@@ -59,18 +59,12 @@ class ProdukController extends Controller
         //validate form
         $this->validate($request, [
             'foto'     => 'required|mimes:jpeg,jpg,png|max:2048',
-            'kode_produk' => 'required|unique:produk',
             'nama_produk' => 'required',
-            'deskripsi_produk' => 'required',
-            'kategori_id' => 'required',
+            'kategori_id' => 'required|exists:kategoris,id',
             'satuan' => 'required',
             'stock' => 'required',
             'harga' => 'required|numeric'
         ]);
-
-
-        $itemuser = $request->user();//ambil data user yang login
-        $inputan['user_id'] = $itemuser->id;
         //upload image
         $foto = $request->file('foto');
         $foto->storeAs('public/produk', $foto->hashName());
@@ -78,16 +72,12 @@ class ProdukController extends Controller
         //create post
         Produk::create([
             'foto'     => $foto->hashName(),
-            'kode_produk'   => $request->kode_produk,
             'nama_produk'     => $request->nama_produk,
-            'deskripsi_produk'   => $request->deskripsi_produk,
             'kategori_id'      => $request->kategori_id,
             'satuan' => $request->satuan,
             'stock'      => $request->stock,
             'harga'      => $request->harga
         ]);
-        $itemproduk = Produk::create($inputan);
-
         //redirect to index
         return redirect('/dataproduk')->with(['success' => 'Data Berhasil Disimpan!']);
     }
@@ -133,9 +123,7 @@ class ProdukController extends Controller
         //validate form
         $this->validate($request, [
             'foto'     => 'required|image|mimes:jpeg,jpg,png|max:2048',
-            'kode_produk' => 'required|unique:produk',
             'nama_produk' => 'required',
-            'deskripsi_produk' => 'required',
             'kategori_id' => 'required',
             'satuan' => 'required',
             'stock' => 'required',
@@ -159,8 +147,6 @@ class ProdukController extends Controller
             $prod->update([
                 'foto'     => $foto->hashName(),
             'nama_produk'     => $request->nama_produk,
-            'kode_produk'   => $request->kode_produk,
-            'deskripsi_produk'   => $request->deskripsi_produk,
             'kategori_id'      => $request->kategori_id,
             'satuan' => $request->satuan,
             'stock'      => $request->stock,
@@ -172,8 +158,6 @@ class ProdukController extends Controller
             //update post without image
             $prod->update([
                 'nama_produk'     => $request->nama_produk,
-            'kode_produk'   => $request->kode_produk,
-            'deskripsi_produk'   => $request->deskripsi_produk,
             'kategori_id'      => $request->kategori_id,
             'satuan' => $request->satuan,
             'stock'      => $request->stock,

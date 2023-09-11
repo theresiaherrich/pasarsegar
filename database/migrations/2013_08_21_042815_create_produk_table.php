@@ -16,10 +16,7 @@ return new class extends Migration
         Schema::create('produk', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('kategori_id')->unsigned();
-            $table->unsignedBigInteger('user_id')->unsigned();
-            $table->string('kode_produk');
             $table->string('nama_produk');
-            $table->text('deskripsi_produk');
             $table->string('foto')->nullable();//banner produknya
             $table->string('satuan');
             $table->string('stock');
@@ -29,7 +26,6 @@ return new class extends Migration
 
         Schema::table('produk', function($table)
         {
-            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('kategori_id')->references('id')->on('kategoris');
         });
     }
