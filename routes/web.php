@@ -24,6 +24,9 @@ Route::get('/hiddenhome', function () {
 Route::get('/produk', function () {
     return view('produk');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 Route::get('/admin', function () {
     return view('admin.index');
