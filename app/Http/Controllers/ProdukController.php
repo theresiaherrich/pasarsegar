@@ -63,7 +63,7 @@ class ProdukController extends Controller
             'kategori_id' => 'required|exists:kategoris,id',
             'satuan' => 'required',
             'stock' => 'required',
-            'harga' => 'required|numeric'
+            'harga' => 'required'
         ]);
         //upload image
         $foto = $request->file('foto');

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Models\Produk;
@@ -21,9 +22,7 @@ Route::get('/hiddenhome', function () {
     return view('home');
 });
 
-Route::get('/produk', function () {
-    return view('produk');
-});
+Route::get('/produk', [HomeController::class,'produk']);
 Route::get('/contact', function () {
     return view('contact');
 });

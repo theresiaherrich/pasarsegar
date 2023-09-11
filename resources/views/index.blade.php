@@ -47,35 +47,14 @@
 
 
     <div class="owl-carousel mt-4 " id="owl-example">
+@foreach($kategori as $k)
 
-
       <div class="item card border-0  ">
-          <img src="img/k1.png" class="rounded-image"  alt="...">
-          <h3 class="text-dark mt-2" >Buah</h3>
+          <img src="{{ asset('storage/kategori/'.$k->foto) }}" class="rounded-image"  alt="...">
+          <h3 class="text-dark mt-2" >{{ $k->nama_kategori }}</h3>
       </div>
-      <div class="item card border-0  ">
-          <img src="img/k2.png" class="rounded-image"   alt="...">
-          <h3 class="text-dark mt-2" >Buah</h3>
-      </div>
-      <div class="item card border-0  ">
-          <img src="img/k3.png" class="rounded-image"  alt="...">
-          <h3 class="text-dark mt-2" >Buah</h3>
-      </div>
-      
-      <div class="item card border-0  ">
-          <img src="img/k4.png" class="rounded-image"  alt="...">
-          <h3 class="text-dark mt-2" >Buah</h3>
-      </div>
-      
-      <div class="item card border-0  ">
-          <img src="img/k5.png" class="rounded-image"   alt="...">
-          <h3 class="text-dark mt-2" >Buah</h3>
-      </div>
-      <div class="item card border-0  ">
-          <img src="img/k6.png" class="rounded-image"  alt="...">
-          <h3 class="text-dark mt-2" >Buah</h3>
-      </div>
-     
+    
+     @endforeach
      
   </div>
 </div>
@@ -102,16 +81,17 @@
 
 <div class="container-sm mb-5">
   <div class="row">
+    @foreach($produk as $p)
     <div class="col-lg-4 mb-4">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="img/Kangkung.webp" class="img-fluid rounded-start" alt="...">
+            <img src="{{ asset('storage/produk/'.$p->foto) }}" class="img-fluid rounded-start" alt="..."style="height: 100px;">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Product</h5>
-              <h6>Rp. 10.000 </h6>
+              <h5 class="card-title">{{ $p->nama_produk }}</h5>
+              <h6>{{ "Rp " . number_format($p->harga, 2, ",", "."); }}</h6>
 
 
             </div>
@@ -119,57 +99,9 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="img/bg1.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-4">
-            <div class="card-body">
-              <h5 class="card-title">Product</h5>
-              <h6>Rp. 10.000 </h6>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="img/bg1.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-4">
-            <div class="card-body">
-              <h5 class="card-title">Product</h5>
-              <h6>Rp. 10.000 </h6>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="img/bg1.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-4">
-            <div class="card-body">
-              <h5 class="card-title">Product</h5>
-              <h6>Rp. 10.000 </h6>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    @endforeach
+    
+    
   </div>
 </div>
 

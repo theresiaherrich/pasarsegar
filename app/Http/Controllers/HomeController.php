@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $kategori = Kategori::all();
+        $produk = Produk::latest()->paginate('9');
+        return view('index',compact('kategori','produk'));
+       
     }
+    public function produk()
+    {
+        $kategori = Kategori::all();
+        $produk = Produk::latest()->get();
+
+
+        return view('produk',compact('kategori','produk'));
+       
+    }
+
+     
+    
 }
