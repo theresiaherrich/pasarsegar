@@ -34,14 +34,13 @@ Route::get('/about', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
-
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
-Route::get('/tambahproduk', [ProdukController::class, 'create'])->name('create');
+
 
 
 //kategoriadmin
 Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
-Route::get('/tambahkategori', [KategoriController::class, 'create'])->name('create');
+
 
 
 

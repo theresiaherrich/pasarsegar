@@ -116,7 +116,7 @@
                                                 <button class="btn btn-soft-danger" id="remove-actions"
                                                     onClick="deleteMultiple()"><i
                                                         class="ri-delete-bin-2-line"></i></button>
-                                                <a href="{{ route('dataproduk.create') }}" class="btn btn-success add-btn"><i
+                                                <a href="{{ route('dataproduk.create')}}" class="btn btn-success add-btn"><i
                                                         class="ri-add-line align-bottom me-1"></i> Add Product</a>
                                             </div>
                                         </div>

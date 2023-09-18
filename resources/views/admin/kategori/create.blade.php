@@ -119,7 +119,7 @@
                                                 <p>{{ $message }}</p>
                                             </div>
                                         @endif
-                                <form action="{{ route('datakategori.store') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('datakategori.store')}}" method="post" enctype="multipart/form-data">
                                             @csrf
                                             <div class="mb-3">
                                                 <label class="form-label" for="nama_kategori">Kategori</label>
