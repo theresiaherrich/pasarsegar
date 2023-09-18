@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="icon" href="img/BGPTH.png">
-   
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
     }
     .navbar-brand img{
       position: relative;
-      
+
     }
     .navt{
       display: inline;
@@ -51,7 +51,7 @@
   background-color: #ffffffb7;
 }
 .accordion-button:focus{
-  
+
   outline: 2px solid #0cc569;
 }
 .accordion-button:checked{
@@ -59,14 +59,14 @@
 }
   </style>
   <body>
-   
+
     <nav class="navbar navbar-expand-lg shadow-lg sticky-top"style="background-image:url('img/bgnv.jpg')">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/PASAR SEGAR.png" alt="Bootstrap" width="65" >
         </a>
-      
-        
+
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -76,8 +76,14 @@
               <a class="nav-link  " aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link " href="/produk">Produk</a>
+              <a class="nav-link " href="/produk">Product</a>
             </li>
+            <li class="nav-item px-3">
+                <a class="nav-link " href="/about">About Us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link " href="/contact">Contact Us</a>
+              </li>
             <li class="nav-item px-3">
               <a class="nav-link " href="#"><i class="bi bi-search"></i>&nbsp;&nbsp;<span class="navt">Cari</span></a>
             </li>
@@ -108,16 +114,16 @@
                   </form>
               </div>
             </li>
-            
-           
-           
+
+
+
           </ul>
-         
+
         </div>
       </div>
-    </nav>  
+    </nav>
 @yield('container')
- 
+
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
@@ -159,60 +165,60 @@
     itemsMobile : [479,1],
     singleItem : false,
     itemsScaleUp : false,
- 
+
     //Basic Speeds
     slideSpeed : 200,
     paginationSpeed : 800,
     rewindSpeed : 1000,
- 
+
     //Autoplay
     autoPlay : false,
     stopOnHover : false,
- 
+
     // Navigation
     navigation : false,
     navigationText : ["prev","next"],
     rewindNav : true,
     scrollPerPage : false,
- 
+
     //Pagination
     pagination : true,
     paginationNumbers: false,
- 
-    // Responsive 
+
+    // Responsive
     responsive: true,
     responsiveRefreshRate : 200,
     responsiveBaseWidth: window,
- 
+
     // CSS Styles
     baseClass : "owl-carousel",
     theme : "owl-theme",
- 
+
     //Lazy load
     lazyLoad : false,
     lazyFollow : true,
     lazyEffect : "fade",
- 
+
     //Auto height
     autoHeight : false,
- 
-    //JSON 
-    jsonPath : false, 
+
+    //JSON
+    jsonPath : false,
     jsonSuccess : false,
- 
+
     //Mouse Events
     dragBeforeAnimFinish : true,
     mouseDrag : true,
     touchDrag : true,
- 
+
     //Transitions
     transitionStyle : false,
- 
+
     // Other
     addClassActive : false,
- 
-   
- 
+
+
+
 
       });
     });

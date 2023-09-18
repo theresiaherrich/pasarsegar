@@ -8,7 +8,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Create Product | Velzon - Admin & Dashboard Template</title>
+    <title>Tambah Produk| Admin </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
@@ -119,8 +119,10 @@
                                                 <p>{{ $message }}</p>
                                             </div>
                                         @endif
-                                <form action="{{ route('dataproduk.store') }}" method="post" enctype="multipart/form-data">
+                                <form action="{{ route('dataproduk.store')}}" method="post" enctype="multipart/form-data">
                                             @csrf
+
+
                                             <div class="mb-3">
                                                 <label class="form-label" for="nama_produk">Nama Produk</label>
                                                 <input type="text" class="form-control" name="nama_produk"
@@ -179,8 +181,8 @@
                                                         <div class="mb-3">
                                                             <label class="form-label"
                                                             for="kategori_id">Kategori Produk</label>
-                                                            <select name="kategori_id" id="kategori_id" class="form-control">
-                                                                <option value="">Pilih Kategori</option>
+                                                            <select class="form-select" name="kategori_id" id="kategori_id" >
+                                                                <option selected>Pilih Kategori</option>
                                                                 @foreach($kat as $kategori)
                                                                 <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
                                                                 @endforeach

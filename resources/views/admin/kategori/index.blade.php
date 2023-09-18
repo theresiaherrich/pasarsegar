@@ -116,10 +116,8 @@
                                                 <button class="btn btn-soft-danger" id="remove-actions"
                                                     onClick="deleteMultiple()"><i
                                                         class="ri-delete-bin-2-line"></i></button>
-                                                <button type="button" class="btn btn-success add-btn"
-                                                    data-bs-toggle="modal" id="create-btn"
-                                                    data-bs-target="#showModal"><i
-                                                        class="ri-add-line align-bottom me-1"></i> Add Kategori</button>
+
+                                                        <a href="{{ route('datakategori.create')}}" class="btn btn-success add-btn">Add Kategori</a>
                                                 <button type="button" class="btn btn-info"><i
                                                         class="ri-file-download-line align-bottom me-1"></i>
                                                     Import</button>

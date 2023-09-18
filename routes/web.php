@@ -27,17 +27,20 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::get('/admin', function () {
     return view('admin.index');
 });
-
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
-Route::get('/tambahproduk', [ProdukController::class, 'create'])->name('create');
+
 
 
 //kategoriadmin
 Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
-Route::get('/tambahkategori', [KategoriController::class, 'create'])->name('create');
+
 
 
 
