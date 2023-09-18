@@ -57,7 +57,7 @@
 
       <!-- Team item-->
       <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="img/fajar.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Fajar</h5><span class="small text-uppercase text-muted">Back-end</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="bi bi-telephone"></i> </a></li>
@@ -70,7 +70,7 @@
 
       <!-- Team item-->
       <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="img/theresia.jpg" height="10" width="100" alt="" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="img/there.jpg" height="10" width="100" alt="" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">Theresia</h5><span class="small text-uppercase text-muted">Back-end</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="bi bi-telephone"></i> </a></li>
