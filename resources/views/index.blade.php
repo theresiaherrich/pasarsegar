@@ -91,7 +91,7 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">{{ $p->nama_produk }}</h5>
-              <h6>{{ "Rp " . number_format($p->harga, 2, ",", "."); }}</h6>
+              <h6>{{ "Rp " . number_format($p->harga, 2, ",", ".") }}</h6>
 
 
             </div>

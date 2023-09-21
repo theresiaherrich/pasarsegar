@@ -25,16 +25,18 @@
             @foreach($produk as $p )
 
       <div class="col-lg-3 mb-3 ">
+      <a href="/detail/{{ $p->id }}">
         <div class="card border-0 rounded-3 shadow" style="width: 100%;">
             <img src="{{ asset('storage/produk/'.$p->foto) }}" class="card-img-top rounded-3 rounded-bottom-0"style="height:180px" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{$p->nama_produk}}</h5>
+              <h5 class="card-title" >{{$p->nama_produk}}</h5>
             <p>{{ "Rp " . number_format($p->harga, 2, ",", ".") }} / {{$p->satuan}}</p>
-            <a href="#" class="btn btn-success btn-card rounded-3 mb-3 mt-3" > <i class="bi bi-cart-plus"></i> Add to cart</a>
+            
             </div>
           </div>
+          </a>   
         </div>
-                     
+          
      
     @endforeach
         

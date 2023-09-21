@@ -7,6 +7,7 @@
     <link rel="icon" href="img/BGPTH.png">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.nice-number.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,7 @@
     <!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+ 
 
     <!-- Scripts Auth-->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -153,8 +155,14 @@
 <script src="js/bootstrap.js"></script>
 <script src="owl-carousel/owl.carousel.min.js"></script>
 
+
+<script src="js/jquery.nice-number.js"></script>
+
+
   <script type="text/javascript">
   $(document).ready(function($) {
+    
+$('input[type="number"]').niceNumber();
       $("#owl-example").owlCarousel({
         items : 4,
     itemsCustom : false,
@@ -221,7 +229,10 @@
 
 
       });
+
+
     });
   </script>
+  
 </body>
 </html>
