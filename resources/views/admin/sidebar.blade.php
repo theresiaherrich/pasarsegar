@@ -4,10 +4,10 @@
         <!-- Dark Logo-->
         <a href="index.html" class="logo logo-dark">
             <span class="logo-sm">
-            <img src="{{ asset('img/BGPTH-resized.png') }}" alt="" height="50">            
+            <img src="{{ asset('img/BGPTH-resized.png') }}" alt="" height="50">
         </span>
             <span class="logo-lg">
-            <img src="{{ asset('img/BGPTH-resized.png') }}" alt="" height="50">            
+            <img src="{{ asset('img/BGPTH-resized.png') }}" alt="" height="50">
         </span>
         </a>
         <!-- Light Logo-->
@@ -25,7 +25,7 @@
     </div>
 
     <div id="scrollbar">
-        <div class="container-fluid bg-success"> 
+        <div class="container-fluid bg-success">
 
             <div id="two-column-menu bg-success">
             </div>
@@ -37,7 +37,7 @@
                     <div class="collapse menu-dropdown" id="sidebarProduk">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="/tambahproduk" class="nav-link" data-key="t-tambahproduk"> Tambah Produk
+                                <a href="{{ route('dataproduk.create') }}" class="nav-link" data-key="t-tambahproduk"> Tambah Produk
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -55,7 +55,7 @@
                     <div class="collapse menu-dropdown" id="sidebarKategori">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="/tambahkategori" class="nav-link" data-key="t-tambahkategori"> Tambah Kategori
+                                <a href="{{ route('datakategori.create') }}" class="nav-link" data-key="t-tambahkategori"> Tambah Kategori
                                 </a>
                             </li>
                             <li class="nav-item">
