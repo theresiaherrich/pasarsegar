@@ -30,6 +30,9 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/keranjang', function () {
+    return view('keranjang');
+});
 
 Route::get('/admin', function () {
     return view('admin.index');
