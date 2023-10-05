@@ -6,9 +6,9 @@
     <title>Bootstrap demo</title>
     <link rel="icon" href="img/BGPTH.png">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery.nice-number.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{asset('css/jquery.nice-number.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="{{ asset('owl-carousel/owl.carousel.css')}}" rel="stylesheet">
+    <link href="{{ asset("owl-carousel/owl.theme.css") }}" rel="stylesheet">
  
 
     <!-- Scripts Auth-->
@@ -62,10 +62,10 @@
   </style>
   <body>
 
-    <nav class="navbar navbar-expand-lg shadow-lg sticky-top"style="background-image:url('img/bgnv.jpg')">
+    <nav class="navbar navbar-expand-lg shadow-lg sticky-top"style="background-image:url('{{asset('img/bgnv.jpg')}}')">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="img/PASAR SEGAR.png" alt="Bootstrap" width="65" >
+          <img src="{{asset('img/PASAR SEGAR.png')}}" alt="Bootstrap" width="65" >
         </a>
 
 
@@ -150,13 +150,13 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="owl-carousel/owl.carousel.min.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{ asset('js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('js/bootstrap.js')}}"></script>
+<script src="{{ asset('owl-carousel/owl.carousel.min.js')}}"></script>
 
 
-<script src="js/jquery.nice-number.js"></script>
+<script src="{{ asset('js/jquery.nice-number.js')}}"></script>
 
 
   <script type="text/javascript">
