@@ -121,7 +121,4 @@
     </div>
   </div>
 </section>
-=======
->>>>>>> 6eb3a8bcc2d7b15cef694ae7a1cb08a338282619
-
 @endsection
