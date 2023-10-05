@@ -20,9 +20,9 @@ class User extends Authenticatable
     protected $fillable = [
         'username',
         'name',
-        'role_akun',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -35,7 +35,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-   
+
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
