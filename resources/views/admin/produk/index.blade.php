@@ -171,7 +171,7 @@
                                                                 {{ number_format($row->harga, 2) }}
                                                             </td>
                                                             <td>
-                                                                {{ $row->kategori_id }}
+                                                                {{ $row->kategori->nama_kategori }}
                                                             </td>
                                                             <td>
                                                                 {{ $row->stock }}
