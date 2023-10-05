@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('contactuses', function (Blueprint $table) {
             $table->id();
-            $table->string('isi');
+            $table->string('nama');
+            $table->string('email');
+            $table->string('pesan');
             $table->timestamps();
         });
     }
