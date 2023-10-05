@@ -17,17 +17,7 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="form-group ">
-                  <input class="form-control text-white" type="text" placeholder="name">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mt-2">
-                  <input class="form-control text-white" type="email" placeholder="email address">
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="form-group mt-2">
-                  <textarea class="form-control text-white" rows="3" placeholder="message"></textarea>
+                  <textarea class="form-control text-white" rows="8" placeholder="Message"></textarea>
                 </div>
               </div>
               <div class="col-lg-12 d-flex align-items-center mt-2">
