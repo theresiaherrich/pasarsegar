@@ -161,8 +161,15 @@
 
   <script type="text/javascript">
   $(document).ready(function($) {
+
+   $('#jumlah').on('change',function(){
+    var jumlah =  $(this).val();
+    var harga =  $('#harga').val();
     
-$('input[type="number"]').niceNumber();
+    $('#subtotal').text('Rp. '+ jumlah * harga);
+
+   });
+    
       $("#owl-example").owlCarousel({
         items : 4,
     itemsCustom : false,

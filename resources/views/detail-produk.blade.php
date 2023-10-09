@@ -11,7 +11,8 @@
         <h4 class=" mb-4 fs-1 ">{{ $produk->nama_produk }}</h4>
         <h5 class="fs-2 text-danger">{{ "Rp " . number_format($produk->harga, 2, ",", ".") }} <span class="fs-5 text-dark">/ {{$produk->satuan}}</span></h5>
         <div class="mt-4">
-       <input type="number" class="form-control rounded-0" name="" id="" value="20">
+       <input type="number" class="form-control rounded-0" id="jumlah" value="1" min="1">
+       <input type="hidden" id="harga" value="{{ $produk->harga }}">
        </div>
     </div>
     <div class="col-lg-3">
@@ -24,7 +25,7 @@
                 <h4>Subtotal</h4>
                 </div>
                 <div class="col-md-6 text-end">
-                <h4>Rp. 10.000</h4>
+                <h4 id="subtotal">{{ "Rp " . number_format($produk->harga, 2, ",", ".") }}</h4>
                 </div>
             </div>
          
