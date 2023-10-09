@@ -65,6 +65,19 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarContact" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarContact">
+                        <i class="ri-archive-line text-light"></i><span class=text-light data-key="t-contact">Contact Us</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarContact">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('datacontact.index') }}" class="nav-link" data-key="t-datacontact"> Data Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->

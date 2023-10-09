@@ -6,6 +6,8 @@ use App\Http\Controllers\ProdukController;
 use App\Models\Produk;
 use App\Http\Controllers\KategoriController;
 use App\Models\Kategori;
+use App\Http\Controllers\ContactusController;
+use App\Models\Contactus;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +25,8 @@ Route::get('/hiddenhome', function () {
 });
 
 Route::get('/produk', [HomeController::class,'produk']);
-Route::get('/contact', function () {
-    return view('contact');
-});
+
+
 
 Route::get('/about', function () {
     return view('about');
@@ -46,7 +47,7 @@ Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 //kategoriadmin
 Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
 
-
+Route::resource('/datacontact', \App\Http\Controllers\ContactusController::class);
 
 
 Auth::routes();
@@ -54,3 +55,4 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/detail/{id}',[HomeController::class,'detail']);
 
+Route::get('/contact', [App\Http\Controllers\ContactusController::class, 'index1'])->name('index1');
