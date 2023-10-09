@@ -90,7 +90,7 @@
               <a class="nav-link " href="#"><i class="bi bi-search"></i>&nbsp;&nbsp;<span class="navt">Cari</span></a>
             </li>
             <li class="nav-item px-3">
-            <a class="nav-link " href="#"><i class="bi bi-cart-fill"></i>&nbsp;&nbsp;<span class="navt">Keranjang</span></a>
+            <a class="nav-link " href="{{ route('keranjang') }}"><i class="bi bi-cart-fill"></i>&nbsp;&nbsp;<span class="navt">Keranjang</span></a>
             </li>
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -161,6 +161,8 @@
 
   <script type="text/javascript">
   $(document).ready(function($) {
+
+    $('input[type=number]').niceNumber();
     
       $("#owl-example").owlCarousel({
         items : 4,

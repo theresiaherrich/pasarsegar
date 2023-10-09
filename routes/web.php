@@ -32,7 +32,7 @@ Route::get('/about', function () {
 });
 Route::get('/keranjang', function () {
     return view('keranjang');
-});
+})->name('keranjang');
 
 Route::get('/admin', function () {
     return view('admin.index');
