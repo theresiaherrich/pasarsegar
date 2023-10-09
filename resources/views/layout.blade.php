@@ -18,7 +18,7 @@
     <!-- Owl Carousel Assets -->
     <link href="{{ asset('owl-carousel/owl.carousel.css')}}" rel="stylesheet">
     <link href="{{ asset("owl-carousel/owl.theme.css") }}" rel="stylesheet">
- 
+
 
     <!-- Scripts Auth-->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -105,7 +105,7 @@
                       <i class="bi bi-box-arrow-right"></i>
                       {{ __('Logout') }}
                   </a>
-                  @if (Auth::user()->role_akun=='admin')
+                  @if (Auth::user()->role=='admin')
                   <a class="dropdown-item" href="/admin">
                     <i class="bi bi-database"></i>
                     {{ __('Admin Page') }}
@@ -161,14 +161,6 @@
 
   <script type="text/javascript">
   $(document).ready(function($) {
-
-   $('#jumlah').on('change',function(){
-    var jumlah =  $(this).val();
-    var harga =  $('#harga').val();
-    
-    $('#subtotal').text('Rp. '+ jumlah * harga);
-
-   });
     
       $("#owl-example").owlCarousel({
         items : 4,
@@ -240,6 +232,6 @@
 
     });
   </script>
-  
+
 </body>
 </html>

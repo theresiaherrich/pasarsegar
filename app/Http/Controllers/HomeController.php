@@ -28,7 +28,7 @@ class HomeController extends Controller
         $kategori = Kategori::all();
         $produk = Produk::latest()->paginate('9');
         return view('index',compact('kategori','produk'));
-       
+
     }
     public function produk()
     {
@@ -37,7 +37,7 @@ class HomeController extends Controller
 
 
         return view('produk',compact('kategori','produk'));
-       
+
     }
     public function detail($id)
     {
@@ -45,9 +45,9 @@ class HomeController extends Controller
 
 
         return view('detail-produk',compact('produk'));
-       
+
     }
 
-     
-    
+
+
 }

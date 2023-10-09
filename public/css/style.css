@@ -63,11 +63,10 @@ h3,h4,h6,p{
     border-radius: 15px;
 }
 
-
-<<<<<<< Updated upstream
 .about{
 	width: 100px;
-=======
+}
+
 @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
 .contact4 {
   font-family: "Montserrat", sans-serif;
@@ -140,6 +139,13 @@ h3,h4,h6,p{
 			position: relative;
 			bottom: -95px;
 	}
->>>>>>> Stashed changes
 }
- 
+
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}

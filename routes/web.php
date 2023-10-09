@@ -53,3 +53,4 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/detail/{id}',[HomeController::class,'detail']);
+
