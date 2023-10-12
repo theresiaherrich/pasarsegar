@@ -48,11 +48,10 @@ Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 //kategoriadmin
 Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
 
-<<<<<<< Updated upstream
 Route::resource('/datacontact', \App\Http\Controllers\ContactusController::class);
-=======
+
 Route::resource('/datauser',\App\Http\Controllers\DatauserController::class);
->>>>>>> Stashed changes
+
 
 
 Auth::routes();
