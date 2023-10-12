@@ -24,7 +24,7 @@ class Produk extends Model
     }
 
 
-    public function images() {
-        return $this->hasMany('App\ProdukImage', 'produk_id');
+    public function cart() {
+        return $this->hasMany(Cart::class);
     }
 }

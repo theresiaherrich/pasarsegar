@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contactus extends Model
 {
-    use HasFactory;
+    protected $table = 'contactuses';
+    protected $fillable = [
+        'nama',
+        'email',
+        'pesan'
+    ];
+    public function user() {
+        return $this->belongsTo(User::class,'nama','email');
+    }
 }

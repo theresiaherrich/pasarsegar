@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('contactuses', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('email');
+            $table->unsignedBigInteger('nama');
+            $table->unsignedBigInteger('email');
             $table->string('pesan');
             $table->timestamps();
+
+            $table->foreign('nama')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('email')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
