@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contactus extends Model
+class Member extends Model
 {
-    protected $table = 'contactuses';
+    protected $table = 'members';
     protected $fillable = [
         'nama',
-        'email',
-        'pesan'
+        'foto',
+        'role',
+        'telp',
+        'twitter',
+        'insta'
     ];
-    
 }

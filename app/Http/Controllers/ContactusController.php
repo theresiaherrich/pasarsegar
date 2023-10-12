@@ -40,7 +40,7 @@ class ContactusController extends Controller
     }
     public function index()
     {
-        $con = Contactus::with('user')->paginate(5);
+        $con = Contactus::latest()->paginate(5);
         return view('admin.contact.index', compact('con'));
     }
 

@@ -92,6 +92,19 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarmember" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarmember">
+                        <i class="ri-archive-line text-light"></i><span class=text-light data-key="t-member">Anggota</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarmember">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('members.index') }}" class="nav-link" data-key="t-datamember"> Data Anggota
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
         <!-- Sidebar -->
