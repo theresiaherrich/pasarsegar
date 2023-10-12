@@ -81,7 +81,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarUser" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarUser">
-                        <i class="bi bi-person-circle text-light"></i><span class=text-light data-key="t-User">User</span>
+                        <i class="ri-account-circle-line text-light"></i><span class=text-light data-key="t-User">User</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarUser">
                         <ul class="nav nav-sm flex-column">
