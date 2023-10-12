@@ -31,13 +31,14 @@ Route::get('/produk', [HomeController::class,'produk']);
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/keranjang', function () {
-    return view('keranjang');
-})->name('keranjang');
 
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+Route::get('/keranjang', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+Route::get('/keranjang/delete/{id}', [\App\Http\Controllers\CartController::class, 'delete'])->name('cart.delete');
+Route::get('/keranjang/{produk}', [\App\Http\Controllers\CartController::class, 'addCart'])->name('add.cart');
 
 
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);

@@ -5,24 +5,27 @@
             <h1 class="text-center">Keranjang</h1>
         </div>
         <div class="row">
-
             <div class="col-lg-6 mx-5 ps-5">
+                                @foreach($keranjangs as $item)
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card mb-3 border-0 bg-white shadow" style="width: 450px;">
                             <div class="row ">
                                 <div class="col-md-4">
-                                    <img src="img/k1.png" class="img-fluid rounded-start" alt="...">
+                                    <img src="{{asset('storage/produk/'. $item->foto)}}" class="img-fluid rounded-start" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <h1 class="card-title">Apel</h1>
-                                                <h5 class="text-danger">Rp. 10.000</h5>
+                                                <h1 class="card-title">{{$item->nama_produk}}</h1>
+                                                <h5 class="text-danger">Rp. {{$item->harga}}</h5>
                                             </div>
                                             <div class="col-lg-6 ">
-                                                <i class="bi bi-x-lg ms-5 px-5 text-danger py-5"></i>
+                                                <a href="{{route('cart.delete', $item->id)}}">
+                                                    <i class="bi bi-x-lg ms-5 px-5 text-danger py-5" id="delete-product"></i>
+                                                </a>
 
                                             </div>
                                         </div>
@@ -32,59 +35,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="card mb-3 border-0 bg-white shadow" style="width: 450px;">
-                            <div class="row ">
-                                <div class="col-md-4">
-                                    <img src="img/k1.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <h1 class="card-title">Apel</h1>
-                                                <h5 class="text-danger">Rp. 10.000</h5>
-                                            </div>
-                                            <div class="col-lg-6 ">
-                                                <i class="bi bi-x-lg ms-5 px-5 text-danger py-5"></i>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="card mb-3 border-0 bg-white shadow" style="width: 450px;">
-                            <div class="row ">
-                                <div class="col-md-4">
-                                    <img src="img/k1.png" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <h1 class="card-title">Apel</h1>
-                                                <h5 class="text-danger">Rp. 10.000</h5>
-                                            </div>
-                                            <div class="col-lg-6 ">
-                                                <i class="bi bi-x-lg ms-5 px-5 text-danger py-5"></i>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
                 </div>
+                                @endforeach
             </div>
             <div class="col-lg-4">
                 <div class="card shadow bg-white  ">
