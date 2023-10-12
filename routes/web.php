@@ -43,6 +43,8 @@ Route::get('/keranjang/{produk}', [\App\Http\Controllers\CartController::class, 
 
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 
+Route::resource('/aboutus', \App\Http\Controllers\AboutController::class);
+Route::resource('/members', \App\Http\Controllers\MemberController::class);
 
 
 //kategoriadmin

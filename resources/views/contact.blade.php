@@ -19,8 +19,8 @@
                 <form action="{{ route('datacontact.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @foreach($us as $user)
-                    <input type="hidden" name="nama" value="{{ $user->id }}" class="form-control" id="nama" placeholder="Nama Kamu " >
-                    <input type="hidden" name="email" value="{{ $user->id }}" class="form-control" id="email" placeholder="email Kamu " >
+                    <input type="hidden" name="nama" value="{{  Auth::user()->name }}" class="form-control" id="nama" placeholder="Nama Kamu " >
+                    <input type="hidden" name="email" value="{{  Auth::user()->email }}" class="form-control" id="email" placeholder="email Kamu " >
                     @endforeach
                   <textarea class="form-control text-black" rows="8" name="pesan" id="pesan" placeholder="Pesan Kamu"></textarea>
                 </div>
