@@ -58,7 +58,11 @@ Route::resource('/datauser',\App\Http\Controllers\DatauserController::class);
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/detail/{id}',[HomeController::class,'detail']);
+
+Route::get('/wishlist', [WishlistController::class, 'index']);
+// Rute untuk menambahkan atau menghapus produk dari wishlist
+Route::post('/addwishlist/{product}', [\App\Http\Controllers\WishlistController::class, 'toggleWishlist'])->name('wishlist.toggle');
 
 Route::get('/contact', [App\Http\Controllers\ContactusController::class, 'index1'])->name('index1');

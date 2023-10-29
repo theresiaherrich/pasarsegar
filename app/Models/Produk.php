@@ -27,4 +27,9 @@ class Produk extends Model
     public function cart() {
         return $this->hasMany(Cart::class);
     }
+
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class, 'produk_id', 'id');
+    }
 }
