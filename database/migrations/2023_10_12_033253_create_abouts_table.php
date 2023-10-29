@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('deskripsi');
             $table->string('telp');
             $table->string('email');
+            $table->string('alamat');
             $table->string('facebook');
             $table->string('insta');
             $table->timestamps();

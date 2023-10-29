@@ -14,6 +14,7 @@ class About extends Model
         'deskripsi',
         'telp',
         'email',
+        'alamat',
         'facebook',
         'insta'
     ];

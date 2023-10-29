@@ -11,18 +11,18 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('template/themesbrand.com/velzon/html/default/assets/images/favicon.ico') }}">
 
     <!-- Layout config Js -->
-    <script src="assets/js/layout.js"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/js/layout.js') }}"></script>
     <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('template/themesbrand.com/velzon/html/default/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('template/themesbrand.com/velzon/html/default/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('template/themesbrand.com/velzon/html/default/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
-    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('template/themesbrand.com/velzon/html/default/assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -31,12 +31,12 @@
     <!-- Begin page -->
     <div id="layout-wrapper">
 
-        @include('admin.header')
+        @include('admin.sidebar')
 
 <!-- removeNotificationModal -->
-!-- /.modal -->
+
         <!-- ========== App Menu ========== -->
-        @include('admin.sidebar')
+        @include('admin.header')
 
         <!-- ============================================================== -->
         <!-- Start right Content here -->
@@ -48,7 +48,7 @@
 
                     <div class="position-relative mx-n4 mt-n4">
                         <div class="profile-wid-bg profile-setting-img">
-                            <img src="assets/images/profile-bg.jpg" class="profile-wid-img" alt="">
+                            <img src="{{ asset('template/themesbrand.com/velzon/html/default/assets/images/profile-bg.jpg" class="profile-wid-img') }}" alt="">
                             <div class="overlay-content">
                                 <div class="text-end p-3">
                                     <div class="p-0 ms-auto rounded-circle profile-photo-edit">
@@ -80,46 +80,55 @@
                                 <div class="card-body p-4">
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="personalDetails" role="tabpanel">
-                                            <form action="javascript:void(0);">
+                                            <form action="{{ route('aboutus.store')}}" method="post" enctype="multipart/form-data">
+                                                @csrf
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="firstnameInput" class="form-label">Nama</label>
-                                                            <input type="text" class="form-control" id="firstnameInput" placeholder="Enter your firstname" value="Dave">
+                                                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Enter your name" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="lastnameInput" class="form-label">Telp</label>
-                                                            <input type="text" class="form-control" id="lastnameInput" placeholder="Enter your lastname" value="Adame">
+                                                            <input type="text" name="telp" class="form-control" id="telp" placeholder="Enter your telp" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="phonenumberInput" class="form-label">Email</label>
-                                                            <input type="text" class="form-control" id="phonenumberInput" placeholder="Enter your phone number" value="+(1) 987 6543">
+                                                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="emailInput" class="form-label">Facebook</label>
-                                                            <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" value="daveadame@velzon.com">
+                                                            <label for="emailInput" class="form-label">Alamat</label>
+                                                            <input type="text" class="form-control" id="alamat" placeholder="Enter your alamat" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
-                                                    <div class="col-lg-12">
+                                                    <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="JoiningdatInput" class="form-label">Instagram</label>
-                                                            <input type="text" class="form-control" data-provider="flatpickr" id="JoiningdatInput" data-date-format="d M, Y" data-deafult-date="24 Nov, 2021" placeholder="Select date" />
+                                                            <input type="text" class="form-control" name="insta"  id="instagram"  placeholder="Enter your instagram" value="">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12">
+                                                     <!--end col-->
+                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
-                                                            <label for="JoiningdatInput" class="form-label">Joining Date</label>
-                                                            <input type="text" class="form-control" data-provider="flatpickr" id="JoiningdatInput" data-date-format="d M, Y" data-deafult-date="24 Nov, 2021" placeholder="Select date" />
+                                                            <label for="phonenumberInput" class="form-label">Facebook</label>
+                                                            <input type="text" name="facebook" class="form-control" id="facebook" placeholder="Enter your facebook" value="">
+                                                        </div>
+                                                    </div>
+                                                    <!--end col-->
+                                                    <div class="col-lg-`12">
+                                                        <div class="mb-3">
+                                                            <label for="phonenumberInput" class="form-label">Logo</label>
+                                                            <input type="file" name="foto" class="form-control" id="foto" placeholder="Enter your foto" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
@@ -127,7 +136,7 @@
                                                     <div class="col-lg-12">
                                                         <div class="mb-3 pb-2">
                                                             <label for="exampleFormControlTextarea" class="form-label">Description</label>
-                                                            <textarea class="form-control" id="exampleFormControlTextarea" placeholder="Enter your description" rows="3">Hi I'm Anna Adame,It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is European languages are members of the same family.</textarea>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea" placeholder="Enter your description" name="deskripsi" rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                     <!--end col-->
@@ -191,18 +200,18 @@
 
 
     <!-- JAVASCRIPT -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/libs/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/js/pages/plugins/lord-icon-2.1.0.js') }}"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/js/plugins.js') }}"></script>
 
     <!-- profile-setting init js -->
-    <script src="assets/js/pages/profile-setting.init.js"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/js/pages/profile-setting.init.js') }}"></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
+    <script src="{{ asset('template/themesbrand.com/velzon/html/default/assets/js/app.js') }}"></script>
 </body>
 
 

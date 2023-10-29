@@ -105,6 +105,20 @@
                         </ul>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#sidebarabout" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarabout">
+                        <i class="ri-archive-line text-light"></i><span class=text-light data-key="t-about">about Us</span>
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarabout">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{ route('aboutus.index') }}" class="nav-link" data-key="t-dataabout"> Data about Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
             </ul>
         </div>
         <!-- Sidebar -->

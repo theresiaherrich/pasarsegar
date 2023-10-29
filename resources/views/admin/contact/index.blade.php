@@ -205,10 +205,10 @@
                                                                     href="javascript:void(0);"
                                                                     class="fw-medium link-primary">#VZ2101</a></td>
                                                             <td>
-                                                                {{ Auth::user()->name, $row->id }}
+                                                                {{ $row->nama }}
                                                             </td>
                                                             <td>
-                                                                {{ Auth::user()->email, $row->id }}
+                                                                {{ $row->email }}
                                                             </td>
                                                             <td>
                                                                 {!! $row->pesan !!}

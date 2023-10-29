@@ -62,6 +62,7 @@ class AboutController extends Controller
             'deskripsi' => 'required',
             'telp' => 'required',
             'email' => 'required',
+            'alamat' => 'required',
             'facebook' => 'required',
             'insta' => 'required'
         ]);
@@ -76,6 +77,7 @@ class AboutController extends Controller
             'deskripsi' => $request->deskripsi,
             'telp' => $request->telp,
             'email'      => $request->email,
+            'alamat'      => $request->alamat,
             'facebook'      => $request->facebook,
             'insta'      => $request->insta
         ]);
@@ -128,6 +130,7 @@ class AboutController extends Controller
             'deskripsi' => 'required',
             'telp' => 'required',
             'email' => 'required',
+            'alamat' => 'required',
             'facebook' => 'required',
             'insta' => 'required'
         ]);
@@ -152,6 +155,7 @@ class AboutController extends Controller
                 'deskripsi' => $request->deskripsi,
                 'telp' => $request->telp,
                 'email'      => $request->email,
+                'alamat' => $request->alamat,
                 'facebook'      => $request->facebook,
                 'insta'      => $request->insta
             ]);
@@ -164,6 +168,7 @@ class AboutController extends Controller
             'deskripsi' => $request->deskripsi,
             'telp' => $request->telp,
             'email'      => $request->email,
+            'alamat'      => $request->alamat,
             'facebook'      => $request->facebook,
             'insta'      => $request->insta
             ]);
