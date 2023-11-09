@@ -32,9 +32,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
 
 Route::get('/keranjang', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
 Route::get('/keranjang/delete/{id}', [\App\Http\Controllers\CartController::class, 'delete'])->name('cart.delete');
@@ -47,14 +44,15 @@ Route::resource('/aboutus', \App\Http\Controllers\AboutController::class);
 Route::resource('/members', \App\Http\Controllers\MemberController::class);
 
 
-//kategoriadmin
-Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
-
-Route::resource('/datacontact', \App\Http\Controllers\ContactusController::class);
-
-Route::resource('/datauser',\App\Http\Controllers\DatauserController::class);
-
-
+//Admin
+Route::group(['middleware' => ['auth', 'adminrole']], function(){
+    Route::get('/admin', function () {
+        return view('admin.index');
+    });
+    Route::resource('/datakategori', \App\Http\Controllers\KategoriController::class);
+    Route::resource('/datacontact', \App\Http\Controllers\ContactusController::class);
+    Route::resource('/datauser',\App\Http\Controllers\DatauserController::class);
+});
 
 Auth::routes();
 
