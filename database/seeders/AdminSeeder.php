@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 class AdminSeeder extends Seeder
 {
@@ -18,7 +19,8 @@ class AdminSeeder extends Seeder
             'username' => 'Admin',
             'name' => 'Adminstrator',
             'email' => 'admin@admin.com',
-            'password' => Hash::make('adminaja')
+            'password' => Hash::make('adminaja'),
+            'created_at' => Carbon::now(),
         ]);
     }
 }
