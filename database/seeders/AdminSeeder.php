@@ -18,6 +18,7 @@ class AdminSeeder extends Seeder
         DB::table('users')->insert([
             'username' => 'Admin',
             'name' => 'Adminstrator',
+            'role_akun' => 'admin',
             'email' => 'admin@admin.com',
             'password' => Hash::make('adminaja'),
             'created_at' => Carbon::now(),

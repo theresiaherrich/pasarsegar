@@ -46,7 +46,7 @@
             <div class="page-content">
                 <div class="container-fluid">
 
-        
+
                     <div class="row">
 
                         <!--end col-->
@@ -56,7 +56,7 @@
                                     <ul class="nav nav-tabs-custom rounded card-header-tabs border-bottom-0" role="tablist">
                                         <li class="nav-item">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#personalDetails" role="tab">
-                                                <i class="fas fa-home"></i> About Us
+                                                <i class="fas fa-home"></i> About Us Edit
                                             </a>
                                         </li>
 
@@ -65,48 +65,50 @@
                                 <div class="card-body p-4">
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="personalDetails" role="tabpanel">
-                                            <form action="{{ route('aboutus.store')}}" method="post" enctype="multipart/form-data">
+                                            <form action="{{ route('aboutus.update', $bot->id) }}" method="post" enctype="multipart/form-data">
                                                 @csrf
+                                                @method('PUT')
+
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="firstnameInput" class="form-label">Nama</label>
-                                                            <input type="text" name="nama" class="form-control" id="nama" placeholder="Enter your name" value="">
+                                                            <input type="text" name="nama" class="form-control" id="nama" value="{{ old('nama', $bot->nama) }}" placeholder="Enter your name" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="lastnameInput" class="form-label">Telp</label>
-                                                            <input type="number" name="telp" class="form-control" id="telp" placeholder="Enter your telp" value="">
+                                                            <input type="number" name="telp" class="form-control" id="telp" value="{{ old('telp', $bot->telp) }}" placeholder="Enter your telp" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="phonenumberInput" class="form-label">Email</label>
-                                                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" value="">
+                                                            <input type="email" name="email" class="form-control" id="email" value="{{ old('email', $bot->email) }}" placeholder="Enter your email" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="emailInput" class="form-label">Alamat</label>
-                                                            <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Enter your alamat" value="">
+                                                            <input type="text" name="alamat" class="form-control" id="alamat"  value="{{ old('alamat', $bot->alamat) }}"placeholder="Enter your alamat" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
                                                     <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="JoiningdatInput" class="form-label">Instagram</label>
-                                                            <input type="text" class="form-control" name="insta"  id="instagram"  placeholder="Enter your instagram" value="">
+                                                            <input type="text" class="form-control" name="insta"  id="instagram" value="{{ old('insta', $bot->insta) }}"  placeholder="Enter your instagram" value="">
                                                         </div>
                                                     </div>
                                                      <!--end col-->
                                                      <div class="col-lg-6">
                                                         <div class="mb-3">
                                                             <label for="phonenumberInput" class="form-label">Facebook</label>
-                                                            <input type="text" name="facebook" class="form-control" id="facebook" placeholder="Enter your facebook" value="">
+                                                            <input type="text" name="facebook" class="form-control" id="facebook" value="{{ old('facebook', $bot->facebook) }}" placeholder="Enter your facebook" value="">
                                                         </div>
                                                     </div>
                                                     <!--end col-->
@@ -121,7 +123,7 @@
                                                     <div class="col-lg-12">
                                                         <div class="mb-3 pb-2">
                                                             <label for="exampleFormControlTextarea" class="form-label">Description</label>
-                                                            <textarea class="form-control" id="exampleFormControlTextarea" placeholder="Enter your description" name="deskripsi" rows="3"></textarea>
+                                                            <textarea class="form-control" id="exampleFormControlTextarea" value="{{ old('deskripsi', $bot->deskripsi) }}" placeholder="Enter your description" name="deskripsi" rows="3"></textarea>
                                                         </div>
                                                     </div>
                                                     <!--end col-->
