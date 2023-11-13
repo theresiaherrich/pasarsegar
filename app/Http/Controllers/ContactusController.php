@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 //import Model "Post
 use App\Models\Contactus;
 use App\Models\User;
+use App\Models\About;
+
 
 //return type View
 use Illuminate\View\View;
@@ -23,7 +25,8 @@ class ContactusController extends Controller
     {
         $con = Contactus::all();
         $us = User::all();
-        return view('contact',compact('con','us'));
+        $bot = About::latest()->paginate(5);
+        return view('contact',compact('con','us','bot'));
     }
 
     public function store(Request $request): RedirectResponse

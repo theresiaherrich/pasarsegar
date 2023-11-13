@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 //import Model "Post
 use App\Models\About;
-
+use App\Models\Member;
 
 //return type View
 use Illuminate\View\View;
@@ -24,6 +24,16 @@ class AboutController extends Controller
      *
      * @return View
      */
+    public function indexo(): View
+    {
+        //get posts
+        $bot = About::latest()->paginate(5);
+        $mem = Member::latest()->paginate(5);
+
+        //render view with posts
+        return view('about', compact('bot','mem'));
+    }
+
     public function index(): View
     {
         //get posts

@@ -52,37 +52,39 @@
                     </div>
                     <div class="pt-4 mb-4 mb-lg-3 pb-lg-4">
                         <div class="row g-4">
+                            @forelse ($bot as $row)
                             <div class="col-auto">
                                 <div class="avatar-lg">
-                                    <img src="{{ asset('template/themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg') }}" alt="user-img" class="img-thumbnail rounded-circle" />
+                                    @if ($row->foto != null)
+                                    <img src="{{ asset('storage/about/'.$row->foto) }}"
+                                    alt="user-img" class="img-thumbnail rounded-circle">
+                                @endif
                                 </div>
                             </div>
                             <!--end col-->
                             <div class="col">
                                 <div class="p-2">
-                                    <h3 class="text-white mb-1">Anna Adame</h3>
-                                    <p class="text-white-75">Owner & Founder</p>
+                                    <h3 class="text-white mb-1"> {{ $row->nama }}</h3>
+                                    <p class="text-white-75"> {{ $row->email }}</p>
                                     <div class="hstack text-white-50 gap-1">
-                                        <div class="me-2"><i class="ri-map-pin-user-line me-1 text-white-75 fs-16 align-middle"></i>California, United States</div>
-                                        <div>
-                                            <i class="ri-building-line me-1 text-white-75 fs-16 align-middle"></i>Themesbrand
-                                        </div>
+                                        <div class="me-2"><i class="ri-map-pin-user-line me-1 text-white-75 fs-16 align-middle"></i> {{ $row->alamat }}</div>
                                     </div>
                                 </div>
                             </div>
                             <!--end col-->
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div>
-                                <div class="d-flex">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="d-flex">
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-pills animation-nav profile-nav gap-2 gap-lg-3 flex-grow-1" role="tablist">
                                     </ul>
                                     <div class="flex-shrink-0">
-                                        <a href="pages-profile-settings.html" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Edit Profile</a>
+                                        <a href="{{ route('aboutus.edit', $row->id) }}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Edit Profile</a>
                                     </div>
                                 </div>
+                                @endforeach
                                 <!-- Tab panes -->
                                 <div class="tab-content pt-4 text-muted">
                                     <div class="tab-pane active" id="overview-tab" role="tabpanel">
@@ -100,27 +102,25 @@
                                                         <div class="table-responsive">
                                                             <table class="table table-borderless mb-0">
                                                                 <tbody>
+                                                                    @forelse ($bot as $row)
                                                                     <tr>
                                                                         <th class="ps-0" scope="row">Full Name :</th>
-                                                                        <td class="text-muted">Anna Adame</td>
+                                                                        <td class="text-muted"> {{ $row->nama }}</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th class="ps-0" scope="row">Mobile :</th>
-                                                                        <td class="text-muted">+(1) 987 6543</td>
+                                                                        <td class="text-muted"> {{ $row->telp }}</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th class="ps-0" scope="row">E-mail :</th>
-                                                                        <td class="text-muted">daveadame@velzon.com</td>
+                                                                        <td class="text-muted"> {{ $row->email }}</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th class="ps-0" scope="row">Location :</th>
-                                                                        <td class="text-muted">California, United States
+                                                                        <td class="text-muted"> {{ $row->alamat }}
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <th class="ps-0" scope="row">Joining Date</th>
-                                                                        <td class="text-muted">24 Nov 2021</td>
-                                                                    </tr>
+                                                                    @endforeach
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -130,8 +130,7 @@
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <h5 class="card-title mb-3">About</h5>
-                                                        <p>Hi I'm Anna Adame, It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is European languages are members of the same family.</p>
-                                                        <p>You always want to make sure that your fonts work well together and try to limit the number of fonts you use to three or less. Experiment and play around with the fonts that you already have in the software you’re working with reputable font websites. This may be the most commonly encountered tip I received from the designers I spoke with. They highly encourage that you use different fonts in one design, but do not over-exaggerate and go overboard.</p>
+                                                        <p> {!! $row->deskripsi  !!}</p>
                                                         <div class="row">
                                                             <div class="col-6 col-md-4">
                                                                 <div class="d-flex mt-4">
@@ -141,8 +140,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="flex-grow-1 overflow-hidden">
-                                                                        <p class="mb-1">Designation :</p>
-                                                                        <h6 class="text-truncate mb-0">Lead Designer / Developer</h6>
+                                                                        <p class="mb-1">Facebook :</p>
+                                                                        <h6 class="text-truncate mb-0"> {{ $row->facebook }}</h6>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -155,8 +154,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="flex-grow-1 overflow-hidden">
-                                                                        <p class="mb-1">Website :</p>
-                                                                        <a href="#" class="fw-semibold">www.velzon.com</a>
+                                                                        <p class="mb-1">Instagram :</p>
+                                                                        <a href="#" class="fw-semibold"> {{ $row->insta }}</a>
                                                                     </div>
                                                                 </div>
                                                             </div>

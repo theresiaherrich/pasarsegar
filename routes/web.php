@@ -8,6 +8,8 @@ use App\Http\Controllers\KategoriController;
 use App\Models\Kategori;
 use App\Http\Controllers\ContactusController;
 use App\Models\Contactus;
+use App\Http\Controllers\AboutController;
+use App\Models\About;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +30,9 @@ Route::get('/produk', [HomeController::class,'produk']);
 
 
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/about', function () {
+//     return view('about');
+// });
 
 Route::get('/admin', function () {
     return view('admin.index');
@@ -43,6 +45,7 @@ Route::get('/keranjang/{produk}', [\App\Http\Controllers\CartController::class, 
 
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 
+Route::get('/about', [\App\Http\Controllers\AboutController::class, 'indexo'])->name('indexo');
 Route::resource('/aboutus', \App\Http\Controllers\AboutController::class);
 Route::resource('/members', \App\Http\Controllers\MemberController::class);
 
