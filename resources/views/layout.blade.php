@@ -93,7 +93,7 @@
                         <a class="nav-link  " aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link " href="/produk">Product</a>
+                        <a class="nav-link " href="{{ route('produk', 0) }}">Product</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link " href="/about">About Us</a>
@@ -124,10 +124,14 @@
                             @endisset
                         </div>
                     </li>
+                    @auth
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                           
                             {{ Auth::user()->name }}
+                              
+                           
                             <i class="bi bi-person-circle"></i>
                         </a>
 
@@ -138,16 +142,22 @@
                                 <i class="bi bi-box-arrow-right"></i>
                                 {{ __('Logout') }}
                             </a>
+                            @auth
+                                
                             @if (Auth::user()->role == 'admin')
                                 <a class="dropdown-item" href="/admin">
                                     <i class="bi bi-database"></i>
                                     {{ __('Admin Page') }}
                                 </a>
                             @endif
+                            
+                            @endauth
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </div>
+
+                    @endauth
                     </li>
 
 

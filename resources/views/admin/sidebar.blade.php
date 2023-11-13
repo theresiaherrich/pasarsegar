@@ -23,10 +23,8 @@
             <i class="ri-record-circle-line"></i>
         </button>
     </div>
-
     <div id="scrollbar">
         <div class="container-fluid bg-success">
-
             <div id="two-column-menu bg-success">
             </div>
             <ul class="navbar-nav" id="navbar-nav">

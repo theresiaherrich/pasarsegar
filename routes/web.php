@@ -24,7 +24,7 @@ Route::get('/hiddenhome', function () {
     return view('home');
 });
 
-Route::get('/produk', [HomeController::class,'produk']);
+Route::get('/produk/{kategori}', [HomeController::class,'produk'])->name('produk');
 
 
 
@@ -35,11 +35,14 @@ Route::get('/about', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
-
+Route::middleware('auth')->group(function () {
+   
 Route::get('/keranjang', [\App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
 Route::get('/keranjang/delete/{id}', [\App\Http\Controllers\CartController::class, 'delete'])->name('cart.delete');
 Route::get('/keranjang/{produk}', [\App\Http\Controllers\CartController::class, 'addCart'])->name('add.cart');
 
+    });
+ 
 
 Route::resource('/dataproduk', \App\Http\Controllers\ProdukController::class);
 

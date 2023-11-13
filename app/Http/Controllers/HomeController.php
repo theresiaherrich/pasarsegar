@@ -14,10 +14,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+   
 
     /**
      * Show the application dashboard.
@@ -31,13 +28,22 @@ class HomeController extends Controller
         return view('index',compact('kategori','produk'));
 
     }
-    public function produk()
+    public function produk($id_kategori)
     {
-        $kategori = Kategori::all();
-        $produk = Produk::latest()->get();
 
+        
+        if($id_kategori == 0){
+            $kategori = Kategori::all();
+            $produk = Produk::all();
+            return view('produk',compact('kategori','produk'));
+           
+        }else{
+            $kategori = Kategori::all();
+            $produk = Produk::where('kategori_id','=', $id_kategori)->get();
+            return view('produk',compact('kategori','produk'));
+        }
 
-        return view('produk',compact('kategori','produk'));
+        
 
     }
     public function detail($id)

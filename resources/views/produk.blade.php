@@ -9,7 +9,7 @@
            
             <div class="list-group">
               @foreach($kategori as $k)
-  <a href="" class="list-group-item list-group-item-action" aria-current="true">
+  <a href="{{ route('produk',$k->id) }}" class="list-group-item list-group-item-action" aria-current="true">
     {{$k->nama_kategori}}
 </a>
     @endforeach
@@ -25,16 +25,16 @@
             @foreach($produk as $p )
 
       <div class="col-lg-3 mb-3 ">
-      <a href="/detail/{{ $p->id }}">
+     
         <div class="card border-0 rounded-3 shadow" style="width: 100%;">
             <img src="{{ asset('storage/produk/'.$p->foto) }}" class="card-img-top rounded-3 rounded-bottom-0"style="height:180px" alt="...">
             <div class="card-body">
               <h5 class="card-title" >{{$p->nama_produk}}</h5>
             <p>{{ "Rp " . number_format($p->harga, 2, ",", ".") }} / {{$p->satuan}}</p>
-            
+            <a href="/detail/{{ $p->id }}" style="width: 100%"  class="btn btn-success px-5 "> Add to Cart </a>
             </div>
           </div>
-          </a>   
+          
         </div>
           
      
