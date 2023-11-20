@@ -1,15 +1,16 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdukController;
-use App\Models\Produk;
-use App\Http\Controllers\KategoriController;
-use App\Models\Kategori;
-use App\Http\Controllers\ContactusController;
-use App\Models\Contactus;
-use App\Http\Controllers\AboutController;
 use App\Models\About;
+use App\Models\Produk;
+use App\Models\Kategori;
+use App\Models\Contactus;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\ContactusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,7 @@ Route::get('/detail/{id}',[HomeController::class,'detail']);
 
 Route::get('/contact', [App\Http\Controllers\ContactusController::class, 'index1'])->name('index1');
 Route::get('/kategori/{id}',[HomeController::class,'kategori'])->name('kategori');
+
+Route::get('/wishlist', [WishlistController::class, 'index']);
+// Rute untuk menambahkan atau menghapus produk dari wishlist
+Route::post('/addwishlist/{product}', [\App\Http\Controllers\WishlistController::class, 'toggleWishlist'])->name('wishlist.toggle');

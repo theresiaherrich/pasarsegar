@@ -48,9 +48,16 @@
                             <h4 id="subtotal">{{ 'Rp ' . number_format($produk->harga, 2, ',', '.') }}</h4>
                         </div>
                     </div>
+                    @auth
                     <a href="{{ route('add.cart', $produk->id) }}" class="btn btn-success mb-3 btn-lg" style="width:100%;">
                         <i class="bi bi-cart-plus"></i> Add to cart
                     </a>
+                    @else
+                    <a href="{{ route('login') }}" class="btn btn-success mb-3 btn-lg" style="width:100%;">
+                        <i class="bi bi-cart-plus"></i> Add to cart
+                    </a>
+                    @endauth
+                  
                     <button class="btn btn-outline-success btn-lg ">Beli</button>
                 </div>
             </div>
