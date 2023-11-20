@@ -59,6 +59,9 @@ Route::group(['middleware' => ['auth', 'adminrole']], function(){
 Auth::routes();
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
+Route::get('/produk', [\App\Http\Controllers\HomeController::class, 'produk'])->name('produk');
+
 Route::get('/detail/{id}',[HomeController::class,'detail']);
 
 Route::get('/contact', [App\Http\Controllers\ContactusController::class, 'index1'])->name('index1');
+Route::get('/kategori/{id}',[HomeController::class,'kategori'])->name('kategori');

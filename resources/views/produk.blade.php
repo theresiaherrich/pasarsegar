@@ -9,7 +9,7 @@
            
             <div class="list-group">
               @foreach($kategori as $k)
-  <a href="{{ route('produk',$k->id) }}" class="list-group-item list-group-item-action" aria-current="true">
+  <a href="{{ route('kategori',$k->id) }}" class="list-group-item list-group-item-action" aria-current="true">
     {{$k->nama_kategori}}
 </a>
     @endforeach

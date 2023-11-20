@@ -28,23 +28,18 @@ class HomeController extends Controller
         return view('index',compact('kategori','produk'));
 
     }
-    public function produk($id_kategori)
+    public function produk()
     {
-
-        
-        if($id_kategori == 0){
             $kategori = Kategori::all();
             $produk = Produk::all();
             return view('produk',compact('kategori','produk'));
-           
-        }else{
+    }
+
+    public function kategori($id)
+    {
             $kategori = Kategori::all();
-            $produk = Produk::where('kategori_id','=', $id_kategori)->get();
+            $produk = Produk::where('kategori_id','=', $id)->get();
             return view('produk',compact('kategori','produk'));
-        }
-
-        
-
     }
     public function detail($id)
     {
